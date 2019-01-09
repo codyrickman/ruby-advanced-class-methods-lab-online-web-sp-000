@@ -44,8 +44,12 @@ class Song
     song.name = parsed[1]
     song.artist_name = parsed[0]
   end
-  def self.create_from_filename(name)
-
+  def self.create_from_filename(file_name)
+    song = self.new
+    parsed = file_name.split(/-./)
+    song.name = parsed[1]
+    song.artist_name = parsed[0]
+    @@all << song
   end
   def self.destroy_all
     self.all.clear
