@@ -38,7 +38,7 @@ class Song
     sorted = @@all.sort_by { |song| song.name }
     return sorted
   end
-  def self.new_from_file(file_name)
+  def self.new_from_filename(file_name)
     song = self.new
     parsed = file_name.split(/-./)
     song.name = parsed[1]
