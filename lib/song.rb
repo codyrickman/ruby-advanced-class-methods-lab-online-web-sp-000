@@ -39,10 +39,10 @@ class Song
     return sorted
   end
   def self.new_from_filename(file_name)
-    song = self.new
+    s = self.new
     parsed = file_name.split(/-./)
-    song.name = parsed[1]
-    song.artist_name = parsed[0]
+    s.name = parsed[1]
+    s.artist_name = parsed[0]
   end
   def self.create_from_filename(file_name)
     song = self.new
